@@ -42,14 +42,13 @@ namespace DnxWebA
         // Configure is called after ConfigureServices is called.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            app.UseRuntimeInfoPage();
             loggerFactory.MinimumLevel = LogLevel.Information;
-            loggerFactory.AddConsole();
-
-            // Configure the HTTP request pipeline.
 
             // Add the following to the request pipeline only in development environment.
             if (env.IsDevelopment())
             {
+                loggerFactory.AddConsole();
                 app.UseErrorPage(ErrorPageOptions.ShowAll);
             }
             else
