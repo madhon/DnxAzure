@@ -49,7 +49,7 @@ namespace DnxWebA
             if (env.IsDevelopment())
             {
                 loggerFactory.AddConsole();
-                app.UseErrorPage(ErrorPageOptions.ShowAll);
+                app.UseErrorPage();
             }
             else
             {
