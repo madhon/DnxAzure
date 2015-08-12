@@ -1,14 +1,14 @@
 @{
     ViewData["Title"] = "Contact";
 }
-
+<div class="mdl-grid">
 <form action="#" role="form" name="frmContact"  data-parsley-validate>
-  <div class="mdl-textfield mdl-js-textfield textfield-demo">
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col textfield-demo">
     <input class="mdl-textfield__input" type="text" id="Name" autofocus required />
     <label class="mdl-textfield__label" for="Name">Your Name...</label>
   </div>
 
-  <div class="mdl-textfield mdl-js-textfield textfield-demo">
+  <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col textfield-demo">
     <input class="mdl-textfield__input" type="email" id="Email" data-parsley-trigger="change" required />
     <label class="mdl-textfield__label" for="Email">Your Email Address...</label>
   </div>
@@ -19,18 +19,19 @@
   </div>
 
   <div>
-        <button class="mdl-button mdl-js-button mdl-button--primary" type="submit" name="SubmitBtn">Submit
+        <button class="mdl-button mdl-js-button mdl-button--primary mdl-cell mdl-cell--12-col" type="submit" name="SubmitBtn">Submit
             <i class="material-icons">send</i>
         </button>
   </div>
 
   <div>
-        <button class="mdl-button mdl-js-button mdl-button--accent" type="reset" name="ResetBtn">Reset
+        <button class="mdl-button mdl-js-button mdl-button--accent mdl-cell mdl-cell--12-col" type="reset" name="ResetBtn">Reset
             <i class="material-icons">undo</i>
         </button>
   </div>
 
 </form>
+</div>
 
 @section scriptFiles {
      <script type="text/javascript" src="//cdn.jsdelivr.net/parsleyjs/2.1.3/parsley.min.js"></script>
