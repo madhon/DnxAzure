@@ -23,10 +23,8 @@
       <div class="mdl-layout-spacer"></div>
       <!-- Navigation. We hide it in small screens. -->
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link 1</a>
-        <a class="mdl-navigation__link" href="">Link 2</a>
-        <a class="mdl-navigation__link" href="">Link 3</a>
-        <a class="mdl-navigation__link" href="">Link 4</a>
+        <a class="mdl-navigation__link" href="">Home</a>
+        <a class="mdl-navigation__link" href="/home/contact">Contact</a>
       </nav>
     </div>
   </header>
@@ -34,10 +32,8 @@
   <div class="mdl-layout__drawer">
     <span class="mdl-layout-title">DnxWebA</span>
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="">Link 1</a>
-      <a class="mdl-navigation__link" href="">Link 2</a>
-      <a class="mdl-navigation__link" href="">Link 3</a>
-      <a class="mdl-navigation__link" href="">Link 4</a>
+       <a class="mdl-navigation__link" href="">Home</a>
+       <a class="mdl-navigation__link" href="/home/contact">Contact</a>
     </nav>
   </div>
 
@@ -46,6 +42,12 @@
         @RenderBody()
     </div>
   </main>
+
+  <footer class="mdl-mini-footer">
+  <div class="mdl-mini-footer__left-section">
+    <div class="mdl-logo">Copyright &copy; @DateTime.Now.Year Madhon</div>
+  </div>
+</footer>
 </div>
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="//storage.googleapis.com/code.getmdl.io/1.0.2/material.min.js"></script>
