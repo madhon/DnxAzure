@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{214A99B1-5AE1-4EE6-9C54-57A9CCBE9036}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA12C0D7-9729-477C-9D90-64C9D1DC32A8}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		NuGet.Config = NuGet.Config
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "jspmdnx", "src\jspmdnx\jspmdnx.xproj", "{F5977442-1FCF-4D41-9C50-68407A4183C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F5977442-1FCF-4D41-9C50-68407A4183C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5977442-1FCF-4D41-9C50-68407A4183C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5977442-1FCF-4D41-9C50-68407A4183C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5977442-1FCF-4D41-9C50-68407A4183C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F5977442-1FCF-4D41-9C50-68407A4183C9} = {214A99B1-5AE1-4EE6-9C54-57A9CCBE9036}
+	EndGlobalSection
+EndGlobal
