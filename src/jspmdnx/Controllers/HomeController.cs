@@ -1,32 +1,24 @@
 ﻿namespace jspmdnx.Controllers
 {
-  using System;
-  using Microsoft.AspNet.Mvc;
+    using System;
+    using Microsoft.AspNet.Mvc;
 
-  public class HomeController : Controller
-  {
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-      return View();
+        public IActionResult Index() => View();
+
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Your application description page.";
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
+            return View();
+        }
+
+        public IActionResult Error() => View("~/Views/Shared/Error.cshtml");
     }
-
-    public IActionResult About()
-    {
-      ViewData["Message"] = "Your application description page.";
-
-      return View();
-    }
-
-    public IActionResult Contact()
-    {
-      ViewData["Message"] = "Your contact page.";
-
-      return View();
-    }
-
-    public IActionResult Error()
-    {
-      return View("~/Views/Shared/Error.cshtml");
-    }
-  }
 }

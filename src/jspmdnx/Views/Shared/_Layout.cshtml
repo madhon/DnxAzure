@@ -2,16 +2,16 @@
 <html lang="">
 <head>
     <meta charset="utf-8" />
-    <link rel="dns-prefetch" href="//ajax.googleapis.com">
-    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="//storage.googleapis.com">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="https://ajax.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://code.getmdl.io">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DnxWebA</title>
-    <link rel="stylesheet" href="//storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-light_blue.min.css" />
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-light_blue.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" />
 </head>
 <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -23,8 +23,8 @@
                 <div class="mdl-layout-spacer"></div>
                 <!-- Navigation. We hide it in small screens. -->
                 <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-navigation__link" href="/"><i class="material-icons">home</i>Home</a>
-                    <a class="mdl-navigation__link" href="/home/contact"><i class="material-icons">email</i>Contact</a>
+                    <a asp-controller="Home" asp-action="Index" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
+                    <a asp-controller="Home" asp-action="Contact" class="mdl-navigation__link"><i class="material-icons">email</i>Home</a>
                 </nav>
             </div>
         </header>
@@ -32,8 +32,8 @@
         <div class="mdl-layout__drawer">
             <span class="mdl-layout-title">DnxWebA</span>
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="/"><i class="material-icons">home</i>Home</a>
-                <a class="mdl-navigation__link" href="/home/contact"><i class="material-icons">email</i>Contact</a>
+                <a asp-controller="Home" asp-action="Index" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
+                <a asp-controller="Home" asp-action="Contact" class="mdl-navigation__link"><i class="material-icons">email</i>Home</a>
             </nav>
         </div>
 
@@ -49,8 +49,8 @@
             </div>
         </footer>
     </div>
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="//storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.getmdl.io/1.1.3/material.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
