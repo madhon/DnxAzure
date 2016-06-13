@@ -46,7 +46,7 @@
             application.UseStaticFiles();
 
             ConfigureDebugging(application, this.hostingEnvironment);
-            ConfigureLogging(this.hostingEnvironment, loggerfactory, this.configuration);
+            //ConfigureLogging(this.hostingEnvironment, loggerfactory, this.configuration);
             ConfigureErrorPages(application, this.hostingEnvironment);
 
             application.UseMvc();

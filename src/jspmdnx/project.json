@@ -48,7 +48,9 @@
   "publishOptions": {
     "include": [
       "wwwroot",
-      "web.config"
+      "views",
+      "web.config",
+      "config.json"
     ]
   },
 

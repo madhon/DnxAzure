@@ -9,15 +9,10 @@
             IApplicationBuilder application,
             IHostingEnvironment environment)
         {
-            if (environment.IsDevelopment())
-            {
-                application.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                application.UseExceptionHandler("/Home/Error");
+            application.UseDeveloperExceptionPage();
 
-            }
+
+
         }
     }
 }

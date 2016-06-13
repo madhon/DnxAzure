@@ -7,11 +7,12 @@
     {
         private static IConfiguration ConfigureConfiguration(IHostingEnvironment hostingEnvironment)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(hostingEnvironment.ContentRootPath)
-                .AddJsonFile("config.json")
-                .AddEnvironmentVariables();
-            return builder.Build();
+            IConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
+            configurationBuilder.SetBasePath(hostingEnvironment.ContentRootPath);
+            configurationBuilder.AddJsonFile("config.json");
+            configurationBuilder.AddEnvironmentVariables();
+
+            return configurationBuilder.Build();
         }
     }
 }
