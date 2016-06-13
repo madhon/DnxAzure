@@ -1,7 +1,7 @@
 ﻿namespace jspmdnx.Controllers
 {
     using jspmdnx.Constants;
-    using Microsoft.AspNet.Mvc;
+    using Microsoft.AspNetCore.Mvc;
 
     [Route("[controller]")]
     public class ErrorController : Controller

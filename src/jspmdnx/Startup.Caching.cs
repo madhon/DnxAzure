@@ -6,7 +6,7 @@
     {
         private static void ConfigureCachingServices(IServiceCollection services)
         {
-            services.AddCaching();
+            services.AddMemoryCache();
         }
     }
 }

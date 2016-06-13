@@ -1,6 +1,6 @@
 ﻿namespace jspmdnx
 {
-    using Microsoft.AspNet.Hosting;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Logging;
 
@@ -13,8 +13,6 @@
         {
             if (environment.IsDevelopment())
             {
-
-                loggerFactory.MinimumLevel = LogLevel.Debug;
                 loggerFactory.AddConsole();
                 loggerFactory.AddDebug();
             }

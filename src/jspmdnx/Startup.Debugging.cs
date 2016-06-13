@@ -1,7 +1,7 @@
 ﻿namespace jspmdnx
 {
-    using Microsoft.AspNet.Builder;
-    using Microsoft.AspNet.Hosting;
+    using Microsoft.AspNetCore.Builder;
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
 
     public partial class Startup
@@ -21,7 +21,6 @@
             if (environment.IsDevelopment())
             {
                 application.UseRuntimeInfoPage();
-                application.UseBrowserLink();
             }
         }
     }

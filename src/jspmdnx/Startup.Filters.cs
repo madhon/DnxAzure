@@ -1,9 +1,9 @@
 ﻿namespace jspmdnx
 {
     using System.Collections.Generic;
-    using Microsoft.AspNet.Hosting;
-    using Microsoft.AspNet.Mvc.Filters;
-    using NWebsec.Mvc.HttpHeaders;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc.Filters;
+    using NWebsec.AspNetCore.Mvc.HttpHeaders;
 
     public partial class Startup
     {

@@ -1,7 +1,7 @@
 ﻿namespace jspmdnx.Controllers
 {
     using jspmdnx.Constants;
-    using Microsoft.AspNet.Mvc;
+    using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : Controller
     {

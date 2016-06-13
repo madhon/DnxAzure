@@ -1,6 +1,6 @@
 ﻿namespace jspmdnx
 {
-    using Microsoft.AspNet.Routing;
+    using Microsoft.AspNetCore.Routing;
 
     public partial class Startup
     {
