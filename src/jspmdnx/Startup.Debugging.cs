@@ -20,7 +20,7 @@
 
             if (environment.IsDevelopment())
             {
-                application.UseRuntimeInfoPage();
+                //application.UseRuntimeInfoPage();
             }
         }
     }
