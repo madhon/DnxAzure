@@ -9,10 +9,11 @@
     <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - DnxWebA</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
+      <div class="hero-head">
         <header class="header">
           <nav class="nav has-shadow">
             <div class="left-nav">
@@ -29,18 +30,22 @@
           </div>
           </nav>
         </header>
-          
+          </div>
 
         <section class="section">
+          <div class="hero-body">
             <div class="container">
                 @RenderBody()
             </div>
+          </div>
         </section>
 
         <div class="hero-foot">
+        <footer class="footer">
             <div class="container">
-                <div class="tabs is-centered"><p>Copyright &copy; @DateTime.Now.Year Madhon</p></div>
+                <div class="content has-text-centered"><p>Copyright &copy; @DateTime.Now.Year Madhon</p></div>
             </div>
+            </footer>
         </div>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
