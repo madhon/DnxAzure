@@ -4,53 +4,54 @@
     <meta charset="utf-8" />
     <link rel="dns-prefetch" href="https://ajax.googleapis.com">
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://code.getmdl.io">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MadDNX</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.min.css" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-light_blue.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
-      <div class="hero-head">
-        <header class="header">
-          <nav class="nav has-shadow">
-            <div class="left-nav">
-              <span class="nav-item">MadDNX</span>
-             </div>
-             <label class="nav-toggle"  for="nav-toggle-state">
-              <span></span>
-              <span></span>
-              <span></span>
-            </label>
-            <input type="checkbox" id="nav-toggle-state" />
-          <div class="nav-right nav-menu">
-            <a asp-controller="Home" asp-action="Index" class="nav-item"><span class="icon"><i class="fa fa-home"></i></span> Home</a>
-            <a asp-controller="Home" asp-action="Contact" class="nav-item"><span class="icon"><i class="fa fa-envelope"></i></span> Contact</a>
-          </div>
-          </nav>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">MadDNX</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a asp-controller="Home" asp-action="Index" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
+                    <a asp-controller="Home" asp-action="Contact" class="mdl-navigation__link"><i class="material-icons">email</i>Contact</a>
+                </nav>
+            </div>
         </header>
-          </div>
 
-        <section class="section">
-          <div class="hero-body">
-            <div class="container">
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">MadDNX</span>
+            <nav class="mdl-navigation">
+                <a asp-controller="Home" asp-action="Index" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
+                <a asp-controller="Home" asp-action="Contact" class="mdl-navigation__link"><i class="material-icons">email</i>Contact</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content">
+            <div class="page-content">
                 @RenderBody()
             </div>
-          </div>
-        </section>
+        </main>
 
-        <div class="hero-foot">
-        <footer class="footer sticky">
-            <div class="container">
-                <div class="content has-text-centered"><p>Copyright &copy; @DateTime.Now.Year Madhon</p></div>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer__left-section">
+                <div class="mdl-logo">Copyright &copy; @DateTime.Now.Year Madhon</div>
             </div>
-            </footer>
-        </div>
+        </footer>
     </div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -1,28 +1,39 @@
 ﻿@{
   ViewData["Title"] = "Contact";
 }
+<div class="mdl-grid">
     <form action="#" role="form" name="frmContact" data-parsley-validate>
-      <label class="label">Your Name...</label>
-      <p class="control">
-        <input class="input" type="text" id="Name" autofocus required />
-      </p>
+        <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col textfield-demo">
+            <input class="mdl-textfield__input" type="text" id="Name" autofocus required />
+            <label class="mdl-textfield__label" for="Name">Your Name...</label>
+        </div>
 
-      <label class="label">Your Email Address...</label>
-      <p class="control">
-        <input class="input" type="text" id="Email" data-parsley-trigger="change" required />
-      </p>
+        <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col textfield-demo">
+            <input class="mdl-textfield__input" type="email" id="Email" data-parsley-trigger="change" required />
+            <label class="mdl-textfield__label" for="Email">Your Email Address...</label>
+        </div>
 
-      <label class="label">Your Message...</label>
-      <p class="control">
-        <textarea class="textarea" type="text" rows="3" id="Message" required></textarea>
-      </p>
+        <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col textfield-demo">
+            <textarea class="mdl-textfield__input" type="text" rows="3" id="Message" required></textarea>
+            <label class="mdl-textfield__label" for="Message">Your Message...</label>
+        </div>
 
-      <p class="control">
-        <button class="button is-primary" type="submit">Submit</button>
-        <button class="button" type="reset">Reset</button>
-      </p>
+        <div>
+            <button class="mdl-button mdl-js-button mdl-button--primary mdl-cell mdl-cell--12-col" type="submit" name="SubmitBtn">
+                Submit
+                <i class="material-icons">send</i>
+            </button>
+        </div>
+
+        <div>
+            <button class="mdl-button mdl-js-button mdl-button--accent mdl-cell mdl-cell--12-col" type="reset" name="ResetBtn">
+                Reset
+                <i class="material-icons">undo</i>
+            </button>
+        </div>
 
     </form>
+</div>
 
 @section scripts {
     <script type="text/javascript" src="https://cdn.jsdelivr.net/parsleyjs/2.6.0/parsley.min.js"></script>
