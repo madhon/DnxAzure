@@ -9,7 +9,7 @@
         {
             IConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.SetBasePath(hostingEnvironment.ContentRootPath);
-            configurationBuilder.AddJsonFile("config.json", optional: true);
+            configurationBuilder.AddJsonFile("appsettings.json", optional: true);
             configurationBuilder.AddEnvironmentVariables();
 
             return configurationBuilder.Build();
