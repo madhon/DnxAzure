@@ -8,6 +8,7 @@
     <PackageId>jspmdnx</PackageId>
     <RuntimeFrameworkVersion>1.1.0</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50;portable-net45+win8</PackageTargetFallback>
+    <MvcRazorCompileOnPublish>true</MvcRazorCompileOnPublish>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,6 +24,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.ViewCompilation" Version="1.1.0-msbuild3-update1" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="1.1.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="1.1.0" />
