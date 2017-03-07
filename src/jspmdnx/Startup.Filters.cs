@@ -3,7 +3,7 @@
     using System.Collections.Generic;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc.Filters;
-    using NWebsec.AspNetCore.Mvc.HttpHeaders;
+    using NWebsec.AspNetCore.Mvc;
 
     public partial class Startup
     {
