@@ -6,7 +6,7 @@
     <AssemblyName>jspmdnx</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>jspmdnx</PackageId>
-    <RuntimeFrameworkVersion>1.1.2</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>1.1.1</RuntimeFrameworkVersion>
     <PackageTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50;portable-net45+win8</PackageTargetFallback>
   </PropertyGroup>
 
