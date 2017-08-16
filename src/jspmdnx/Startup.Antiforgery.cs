@@ -10,7 +10,7 @@
             services.AddAntiforgery(
                 antiforgeryOptions =>
                 {
-                    antiforgeryOptions.CookieName = "f";
+                    antiforgeryOptions.Cookie.Name = "f";
                     antiforgeryOptions.FormFieldName = "f";
                 });
         }
