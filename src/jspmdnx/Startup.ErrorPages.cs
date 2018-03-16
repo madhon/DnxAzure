@@ -5,14 +5,9 @@
 
     public partial class Startup
     {
-        private static void ConfigureErrorPages(
-            IApplicationBuilder application,
-            IHostingEnvironment environment)
+        private static void ConfigureErrorPages(IApplicationBuilder application)
         {
             application.UseDeveloperExceptionPage();
-
-
-
         }
     }
 }

@@ -44,14 +44,9 @@
         public void Configure(IApplicationBuilder application, ILoggerFactory loggerfactory)
         {
             application.UseStaticFiles();
-
             ConfigureDebugging(application, this.hostingEnvironment);
-            //ConfigureLogging(this.hostingEnvironment, loggerfactory, this.configuration);
-            ConfigureErrorPages(application, this.hostingEnvironment);
-
+            ConfigureErrorPages(application);
             application.UseMvc();
-
-
         }
     }
 }
