@@ -11,11 +11,9 @@
             ILoggerFactory loggerFactory,
             IConfiguration configuration)
         {
-            if (environment.IsDevelopment())
-            {
-                loggerFactory.AddConsole();
-                loggerFactory.AddDebug();
-            }
+            if (!environment.IsDevelopment()) return;
+            loggerFactory.AddConsole();
+            loggerFactory.AddDebug();
         }
     }
 }

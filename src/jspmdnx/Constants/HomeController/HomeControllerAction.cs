@@ -1,6 +1,7 @@
-﻿namespace jspmdnx.Constants
+﻿// ReSharper disable once CheckNamespace
+namespace jspmdnx.Constants
 {
-    public class HomeControllerAction
+    public static class HomeControllerAction
     {
         public const string About = "About";
         public const string Contact = "Contact";

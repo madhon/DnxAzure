@@ -1,4 +1,5 @@
-﻿namespace jspmdnx.Constants
+﻿// ReSharper disable once CheckNamespace
+namespace jspmdnx.Constants
 {
     public static class HomeControllerRoute
     {
