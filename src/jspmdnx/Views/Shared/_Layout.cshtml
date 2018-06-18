@@ -9,36 +9,48 @@
     <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MadDNX</title>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-light_blue.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/site.css" />
+    <script src="/scripts/ready.js"></script>
 </head>
-<body>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">MadDNX</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
+<body class="mdc-typography">
+
+        <div class="mdc-toolbar">
+            <div class="mdc-toolbar__row">
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+              <button class="demo-menu material-icons mdc-toolbar__menu-icon">menu</button>
+              <span class="mdc-toolbar__title">MadDNX</span>
+            </section>
+            <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
                     <a asp-controller="Home" asp-action="Index" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
                     <a asp-controller="Home" asp-action="Contact" class="mdl-navigation__link"><i class="material-icons">email</i>Contact</a>
+            </section>
+           </div>
+        </div >
+
+        <aside class="mdc-drawer mdc-drawer--temporary mdc-typography">
+            <nav class="mdc-drawer__drawer">
+                <header class="mdc-drawer__header">
+                  <div class="mdc-drawer__header-content mdc-theme--text-primary-on-primary mdc-theme--primary-bg">
+                    Navigation
+                  </div>
+                </header>
+
+                <nav  class="mdc-drawer__content mdc-list-group">
+                    <div id="icon-with-text-demo" class="mdc-list">
+                        <a asp-controller="Home" asp-action="Index" class="mdc-list-item"><i class="material-icons">home</i>Home</a>
+                        <a asp-controller="Home" asp-action="Contact" class="mdc-list-item"><i class="material-icons">email</i>Contact</a>
+                    </div>
+                </div>
                 </nav>
-            </div>
-        </header>
-
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">MadDNX</span>
-            <nav class="mdl-navigation">
-                <a asp-controller="Home" asp-action="Index" class="mdl-navigation__link"><i class="material-icons">home</i>Home</a>
-                <a asp-controller="Home" asp-action="Contact" class="mdl-navigation__link"><i class="material-icons">email</i>Contact</a>
             </nav>
-        </div>
+        </aside>
 
-        <main class="mdl-layout__content">
+        <main>
             <div class="page-content">
                 @RenderBody()
             </div>
@@ -49,9 +61,28 @@
                 <div class="mdl-logo">Copyright &copy; @DateTime.Now.Year Madhon</div>
             </div>
         </footer>
-    </div>
+
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/material-components-web@latest/dist/material-components-web.js"></script>
+    <script type="text/javascript">
+        window.mdc.autoInit();
+    </script>
+        <script>
+      demoReady(function() {
+        var drawerEl = document.querySelector('.mdc-drawer');
+        var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;
+        var drawer = new MDCTemporaryDrawer(drawerEl);
+        document.querySelector('.demo-menu').addEventListener('click', function() {
+          drawer.open = true;
+        });
+        drawerEl.addEventListener('MDCTemporaryDrawer:open', function() {
+          console.log('Received MDCTemporaryDrawer:open');
+        });
+        drawerEl.addEventListener('MDCTemporaryDrawer:close', function() {
+          console.log('Received MDCTemporaryDrawer:close');
+        });
+      });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
