@@ -31,7 +31,7 @@
                     ConfigureRouting(x);
                 });
 
-            IMvcBuilder mvcBuilder = services.AddMvc(
+            var mvcBuilder = services.AddMvc(
                 mvcOptions =>
                 {
                     ConfigureSecurityFilters(this.hostingEnvironment, mvcOptions.Filters);
