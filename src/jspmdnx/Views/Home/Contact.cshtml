@@ -1,38 +1,40 @@
 ﻿@{
   ViewData["Title"] = "Contact";
 }
-<div class="mdl-grid">
+<div class="mdc-layout-grid">
+<div class="mdc-layout-grid__inner">
     <form action="#" role="form" name="frmContact" data-parsley-validate>
-        <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col textfield-demo">
-            <input class="mdl-textfield__input" type="text" id="Name" autofocus required />
-            <label class="mdl-textfield__label" for="Name">Your Name...</label>
+        <div class="mdc-text-field mdl-js-textfield mdc-layout-grid__cell mdc-layout-grid__cell--span-12 textfield-demo">
+            <input class="mdc-text-field__input" type="text" id="Name" autofocus required />
+            <label class="mdc-text-field__label" for="Name">Your Name...</label>
         </div>
 
-        <div class="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--12-col textfield-demo">
-            <input class="mdl-textfield__input" type="email" id="Email" data-parsley-trigger="change" required />
-            <label class="mdl-textfield__label" for="Email">Your Email Address...</label>
+        <div class="mdc-text-field mdl-js-textfield mdc-layout-grid__cell mdc-layout-grid__cell--span-12 textfield-demo">
+            <input class="mdc-text-field__input" type="email" id="Email" data-parsley-trigger="change" required />
+            <label class="mdc-text-field__label" for="Email">Your Email Address...</label>
         </div>
 
-        <div class="mdl-textfield mdl-js-textfield  mdl-cell--12-col textfield-demo">
-            <textarea class="mdl-textfield__input" type="text" rows="3" id="Message" required></textarea>
-            <label class="mdl-textfield__label" for="Message">Your Message...</label>
+        <div class="mdc-text-field mdl-js-textfield mdc-layout-grid__cell mdc-layout-grid__cell--span-12 textfield-demo">
+            <textarea class="mdc-text-field__input" type="text" rows="3" id="Message" required></textarea>
+            <label class="mdc-text-field__label" for="Message">Your Message...</label>
         </div>
 
         <div>
-            <button class="mdl-button mdl-js-button mdl-button--primary mdl-button-raised mdl-js-ripple-effect mdl-cell mdl-cell--12-col" type="submit" name="SubmitBtn">
+            <button class="mdc-button mdl-js-button mdl-button--primary mdc-button--raised mdl-js-ripple-effect mdc-layout-grid__cell mdc-layout-grid__cell--span-12" type="submit" name="SubmitBtn" data-mdc-auto-init="MDCRipple">
                 Submit
                 <i class="material-icons">send</i>
             </button>
         </div>
 
         <div>
-            <button class="mdl-button mdl-js-button mdl-button--accent mdl-button-raised mdl-js-ripple-effect mdl-cell mdl-cell--12-col" type="reset" name="ResetBtn">
+            <button class="mdc-button mdl-js-button mdl-button--accent mdc-button--raised mdl-js-ripple-effect mdc-layout-grid__cell mdc-layout-grid__cell--span-12" type="reset" name="ResetBtn" data-mdc-auto-init="MDCRipple">
                 Reset
                 <i class="material-icons">undo</i>
             </button>
         </div>
 
     </form>
+    </div>
 </div>
 
 @section scripts {
