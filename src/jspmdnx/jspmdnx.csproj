@@ -1,11 +1,10 @@
 ﻿<Project ToolsVersion="15.0" Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
     <PreserveCompilationContext>true</PreserveCompilationContext>
     <AssemblyName>jspmdnx</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>jspmdnx</PackageId>
-    <AssetTargetFallback>$(PackageTargetFallback);dotnet5.6;dnxcore50;portable-net45+win8</AssetTargetFallback>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
