@@ -5,13 +5,13 @@
 
     public partial class Startup
     {
-        private static void ConfigureAntiforgeryServices(IServiceCollection services, IHostingEnvironment environment)
+        private static void ConfigureAntiForgeryServices(IServiceCollection services)
         {
             services.AddAntiforgery(
-                antiforgeryOptions =>
+                antiForgeryOptions =>
                 {
-                    antiforgeryOptions.Cookie.Name = "f";
-                    antiforgeryOptions.FormFieldName = "f";
+                    antiForgeryOptions.Cookie.Name = "f";
+                    antiForgeryOptions.FormFieldName = "f";
                 });
         }
     }

@@ -7,7 +7,7 @@
 
     public partial class Startup
     {
-        private static void ConfigureSecurityFilters(IHostingEnvironment environment,
+        private static void ConfigureSecurityFilters(IWebHostEnvironment environment,
             ICollection<IFilterMetadata> filters)
         {
             filters.Add(new XContentTypeOptionsAttribute());

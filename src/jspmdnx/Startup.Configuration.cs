@@ -5,7 +5,7 @@
 
     public partial class Startup
     {
-        private static IConfiguration ConfigureConfiguration(IHostingEnvironment hostingEnvironment)
+        private static IConfiguration ConfigureConfiguration(IWebHostEnvironment hostingEnvironment)
         {
             IConfigurationBuilder configurationBuilder = new ConfigurationBuilder();
             configurationBuilder.SetBasePath(hostingEnvironment.ContentRootPath);

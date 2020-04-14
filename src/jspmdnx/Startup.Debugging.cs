@@ -3,19 +3,20 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
+    using Microsoft.Extensions.Hosting;
 
     public partial class Startup
     {
         private static void ConfigureDebuggingServices(
             IServiceCollection services,
-            IHostingEnvironment environment)
+            IWebHostEnvironment environment)
         {
             
         }
 
         private static void ConfigureDebugging(
             IApplicationBuilder application,
-            IHostingEnvironment environment)
+            IWebHostEnvironment environment)
         {
 
             if (environment.IsDevelopment())

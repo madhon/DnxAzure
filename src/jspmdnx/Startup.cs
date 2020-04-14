@@ -3,8 +3,6 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Routing;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Logging;
@@ -12,9 +10,9 @@
     public partial class Startup
     {
         private readonly IConfiguration configuration;
-        private readonly IHostingEnvironment hostingEnvironment;
+        private readonly IWebHostEnvironment hostingEnvironment;
 
-        public Startup(IHostingEnvironment hostingEnvironment)
+        public Startup(IWebHostEnvironment hostingEnvironment)
         {
             this.hostingEnvironment = hostingEnvironment;
             this.configuration = ConfigureConfiguration(hostingEnvironment);
@@ -33,22 +31,24 @@
                     ConfigureRouting(x);
                 });
 
-            var mvcBuilder = services.AddMvc(
+            services.AddMvc(
                 mvcOptions =>
                 {
                     ConfigureSecurityFilters(this.hostingEnvironment, mvcOptions.Filters);
-                }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);;
+                });
 
-            ConfigureAntiforgeryServices(services, this.hostingEnvironment);
+            ConfigureAntiForgeryServices(services);
         }
 
 
-        public void Configure(IApplicationBuilder application, ILoggerFactory loggerfactory)
+        public void Configure(IApplicationBuilder application)
         {
             application.UseStaticFiles();
-            ConfigureDebugging(application, this.hostingEnvironment);
+            application.UseRouting();
+
             ConfigureErrorPages(application);
-            application.UseMvc();
+
+            application.UseEndpoints( endpoints => endpoints.MapDefaultControllerRoute());
         }
     }
 }
