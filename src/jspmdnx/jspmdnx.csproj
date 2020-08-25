@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="NWebsec.AspNetCore.Mvc" Version="3.0.0" />
-    <PackageReference Include="SecurityCodeScan" Version="3.5.2" PrivateAssets="all" />
+    <PackageReference Include="SecurityCodeScan" Version="3.5.3" PrivateAssets="all" />
   </ItemGroup>
 
 </Project>
