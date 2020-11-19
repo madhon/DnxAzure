@@ -1,6 +1,5 @@
 ﻿namespace jspmdnx
 {
-    using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.DependencyInjection;
 
     public partial class Startup

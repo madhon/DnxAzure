@@ -3,6 +3,7 @@
     using jspmdnx.Constants;
     using Microsoft.AspNetCore.Mvc;
 
+
     public class HomeController : Controller
     {
         [HttpGet("", Name = HomeControllerRoute.GetIndex)]
