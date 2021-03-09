@@ -25,13 +25,11 @@
         {
             ConfigureCachingServices(services);
 
-            RouteOptions routeOptions = null;
-
             services.AddRouting(
                 x =>
                 {
-                    routeOptions = x;
-                    ConfigureRouting(x);
+                    x.AppendTrailingSlash = true;
+                    x.LowercaseUrls = true;
                 });
 
             services.ConfigureLocalization();

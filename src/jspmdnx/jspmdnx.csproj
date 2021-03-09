@@ -6,12 +6,20 @@
     <TieredCompilation>true</TieredCompilation>
     <AspNetCoreModuleName>AspNetCoreModuleV2</AspNetCoreModuleName>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <Nullable>Enable</Nullable>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="LazZiya.TagHelpers" Version="5.0.0" />
     <PackageReference Include="NWebsec.AspNetCore.Mvc" Version="3.0.0" />
-    <PackageReference Include="SecurityCodeScan" Version="3.5.3" PrivateAssets="all" />
+    <PackageReference Include="SecurityCodeScan.VS2019" Version="5.0.0">
+            <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="XLocalizer" Version="1.0.2" />
     <PackageReference Include="XLocalizer.taghelpers" Version="1.0.0" />
     <PackageReference Include="XLocalizer.translate" Version="1.0.0" />

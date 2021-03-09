@@ -1,11 +1,15 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26114.2
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6CD305A2-50F5-4187-B23C-E485F57EC2CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jspmdnx", "src\jspmdnx\jspmdnx.csproj", "{F540B45A-B959-450B-B355-3EDD345B7CA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jspmdnx", "src\jspmdnx\jspmdnx.csproj", "{F540B45A-B959-450B-B355-3EDD345B7CA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0F13B1A7-9C26-4F7B-AF1B-A03B7CF5E819}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +27,8 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F540B45A-B959-450B-B355-3EDD345B7CA5} = {6CD305A2-50F5-4187-B23C-E485F57EC2CA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58731CD7-0657-4091-AC9B-B1D4191EB780}
 	EndGlobalSection
 EndGlobal

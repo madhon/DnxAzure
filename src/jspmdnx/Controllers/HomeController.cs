@@ -7,9 +7,11 @@
     public class HomeController : Controller
     {
         [HttpGet("", Name = HomeControllerRoute.GetIndex)]
+        [AllowAnonymous()]
         public IActionResult Index() => View(HomeControllerAction.Index);
 
         [HttpGet("about", Name = HomeControllerRoute.GetAbout)]
+        [AllowAnonymous()]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -17,6 +19,7 @@
         }
 
         [HttpGet("contact", Name = HomeControllerRoute.GetContact)]
+        [AllowAnonymous()]
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
