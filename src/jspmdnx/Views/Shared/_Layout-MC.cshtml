@@ -9,13 +9,14 @@
     <link rel="dns-prefetch" href="https://maxcdn.bootstrapcdn.com">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - MadDNX</title>
-    <link rel="stylesheet" href="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.css" />
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/site.css" />
-    <script src="/scripts/ready.js"></script>
+    <link rel="stylesheet" href="/css/site.css" asp-append-version="true"/>
+    <script src="/scripts/ready.js" asp-append-version="true"></script>
 </head>
 <body class="mdc-typography">
         <div class="mdc-toolbar">
@@ -60,12 +61,12 @@
             </div>
         </footer>
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://unpkg.com/material-components-web@5.1.0/dist/material-components-web.min.js"></script>
-    <script type="text/javascript">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script type="text/javascript" asp-add-nonce>
         window.mdc.autoInit();
-    </script>
-        <script>
+    </script">
+        <script type="text/javascript" asp-add-content-to-csp>
       demoReady(function() {
         var drawerEl = document.querySelector('.mdc-drawer');
         var MDCTemporaryDrawer = mdc.drawer.MDCTemporaryDrawer;

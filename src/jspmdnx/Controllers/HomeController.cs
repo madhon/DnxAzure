@@ -1,6 +1,7 @@
 ﻿namespace jspmdnx.Controllers
 {
     using jspmdnx.Constants;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
 
